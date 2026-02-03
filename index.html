@@ -1,124 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приглашение на 14 февраля 💖</title>
-    <link rel="stylsheet" href="/css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14 февраля 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff5f8a, #ff8fb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", sans-serif;
+      overflow: hidden;
+      color: white;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.18);
+      padding: 36px 26px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+      max-width: 420px;
+      width: 90%;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-size: 2.1em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 22px;
+      line-height: 1.45;
+    }
+
+    button,
+    a.map-btn {
+      display: inline-block;
+      background: white;
+      color: #ff4f7b;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.05em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      margin: 8px;
+    }
+
+    button:hover,
+    a.map-btn:hover {
+      transform: scale(1.1);
+      background: #ffe3ea;
+    }
+
+    .heart {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 22px;
+      animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
-<style>
-        body {
-            margin: 0;
-            height: 100vh;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', sans-serif;
-            overflow: hidden;
-            color: white;
-        }
 
-        .card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 40px 50px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            backdrop-filter: blur(8px);
-            max-width: 400px;
-        }
-
-        h1 {
-            font-size: 2.3em;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.15em;
-            margin-bottom: 25px;
-        }
-
-        button, a.map-btn {
-            display: inline-block;
-            background: white;
-            color: #ff4f7b;
-            border: none;
-            padding: 14px 28px;
-            font-size: 1.05em;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: 0.3s;
-            text-decoration: none;
-            margin: 8px;
-        }
-
-        button:hover, a.map-btn:hover {
-            transform: scale(1.1);
-            background: #ffe3ea;
-        }
-
-        .heart {
-            position: absolute;
-            color: rgba(255,255,255,0.8);
-            font-size: 20px;
-            animation: float 6s linear infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) scale(1);
-                opacity: 0;
-            }
-            20% { opacity: 1; }
-            100% {
-                transform: translateY(-10vh) scale(1.5);
-                opacity: 0;
-            }
-        }
-    </style>
 <body>
-    <div class="card">
-    <h1>💘 Привет, любовь моя 💘</h1>
+  <div class="card">
+    <h1>💘 С Днём Святого Валентина 💘</h1>
     <p>
-        14 февраля уже совсем близко.<br>
-        Я хочу провести этот день с тобой 💕<br><br>
-        Пойдёшь со мной на свидание?
+      14 февраля — идеальный повод<br />
+      провести вечер вместе ❤️<br /><br />
+      Пойдём на свидание?
     </p>
-    <button onclick="yes()">Да! 💖</button>
-</div>
+    <button onclick="yes()">Да 💖</button>
+  </div>
 
-<script>
+  <script>
     function yes() {
-        document.querySelector('.card').innerHTML = `
-            <h1>🥰 Ура!</h1>
-            <p>
-                Тогда встречаемся в «Рамен Тут» 🍜❤️<br>
-                Жду тебя с нетерпением ✨
-            </p>
-            <a 
-              class="map-btn" 
-              href="https://2gis.ru/search/Рамен%20Тут" 
-              target="_blank">
-              📍 Открыть в 2ГИС
-            </a>
-        `;
+      document.querySelector(".card").innerHTML = `
+        <h1>🥰 Договорились!</h1>
+        <p>
+          Тогда встречаемся в «Bremen» 🍷❤️<br /><br />
+          Я буду очень ждать ✨
+        </p>
+        <a
+          class="map-btn"
+          href="https://2gis.kz/search/Bremen"
+          target="_blank"
+        >
+          📍 Открыть в 2ГИС
+        </a>
+      `;
     }
 
     function createHeart() {
-        const heart = document.createElement('div');
-        heart.className = 'heart';
-        heart.innerText = '❤';
-        heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.fontSize = (15 + Math.random() * 25) + 'px';
-        heart.style.animationDuration = (4 + Math.random() * 4) + 's';
-        document.body.appendChild(heart);
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = 18 + Math.random() * 26 + "px";
+      heart.style.animationDuration = 4 + Math.random() * 4 + "s";
+      document.body.appendChild(heart);
 
-        setTimeout(() => heart.remove(), 6000);
+      setTimeout(() => heart.remove(), 6000);
     }
 
     setInterval(createHeart, 300);
-</script>
-    
+  </script>
 </body>
 </html>
